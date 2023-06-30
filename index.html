@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>WeatherApp</title>
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City name" spellcheck="false">
+            <button>Search</button>
+        </div>
+        <div class="weather">
+            <img src="./weather (1).png" alt="">
+            <h1 class="temp">32°C</h1>
+            <h2 class="city"> Nagpur</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="./humidity.png" alt="" >
+                    <div>
+                        <p class="humidiy">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="./wind.png" alt="" >
+                    <div>
+                        <p class="windspeed">15km/hr</p>
+                        <p>WindSpeed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const apiKey="f4806e27ea9967020c0dc7bd0b04d5c0";
+        const apiUrl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+        const searchBox=document.querySelector(".search input");
+        const searchBtn=document.querySelector(".search button");
+        
+        
+        async function checkWeather(city){
+            const response= await fetch(apiUrl + city + `&appid=${apiKey}`);//continuously check weather data from apiurl
+            var data= await response.json();//save its whole json dta in this variable we can use later
+            console.log(data);//let the console data for assigning queryselectors
+
+            //get data from console and print on screen
+            document.querySelector(".city").innerHTML=data.name;//here we dedicate console data.etc to html classes for showing on website
+            document.querySelector(".temp").innerHTML=data.main.temp + "°C";
+            document.querySelector(".humidiy").innerHTML=data.main.humidity + "%";
+            document.querySelector(".windspeed").innerHTML=data.wind.speed + "km/Hr";
+        }
+        searchBtn.addEventListener("click", ()=>{
+            checkWeather(searchBox.value);
+        })
+       
+    </script>
+</body>
+</html>

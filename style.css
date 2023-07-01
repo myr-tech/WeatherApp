@@ -10,7 +10,7 @@ body{
 }
 .card{
     width: 90%;
-    max-width: 470px;
+    max-width: 450px;
     margin: 100px auto 0;
     border-radius: 20px;
     text-align: center;
@@ -29,6 +29,10 @@ button{
 .weather{
     padding: 20px;
 }
+.weathericon{
+    width: 150px;
+    height: 150px;
+}
 .details{
     display: flex;
     justify-content: space-evenly;
@@ -40,8 +44,8 @@ button{
     margin: 20px;
 }
 .col img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 5px;
 }
 .humidiy, .windspeed{

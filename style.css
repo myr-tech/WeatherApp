@@ -22,7 +22,7 @@ background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(9,100,121,1) 59%, rgb
 .search{
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 15px;
     
 }
 input{
@@ -59,7 +59,7 @@ button img{
 }
 .details{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .col{
     display: flex;
@@ -73,5 +73,5 @@ button img{
     margin: 5px;
 }
 .humidiy, .windspeed{
-    font-size: 2rem;
+    font-size: 1.2rem;
 }

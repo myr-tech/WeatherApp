@@ -6,7 +6,7 @@
     font-family: 'poppins',sans-serif;
 }
 body{
-    background: #222;
+    background: #55abc0;
 }
 .card{
     width: 90%;
@@ -22,15 +22,27 @@ background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(9,100,121,1) 59%, rgb
 .search{
     display: flex;
     justify-content: center;
+    gap: 5px;
     
 }
 input{
     padding: 10px;
     border-radius: 20px;
+    border: none;
+    width: 200px;
 }
 button{
-    padding: 10px;
-    border-radius: 20px;
+    padding-top: 5px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    width: 40px;
+    border: none;
+}
+button img{
+    width: 36px;
+    height: 35px;
 }
 .errormsg{
     font-size: 10px;
